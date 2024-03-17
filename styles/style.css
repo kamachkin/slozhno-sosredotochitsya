@@ -5,50 +5,47 @@
   margin: auto;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
-.header__theme-menu-list{
+.header__theme-menu-list {
   display: flex;
   list-style: none; /* Отключение маркеров списка */
   padding: 0; /* Убираем внутренние отступы */
 }
-.header{
+.header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
-  "header__theme-menu-list header__theme-menu-list"
-  "header_title header_title"
-  ". header_description"
-
+    "header__theme-menu-list header__theme-menu-list"
+    "header_title header_title"
+    ". header_description";
 }
-.header__theme-menu-list{
+.header__theme-menu-list {
   grid-area: header__theme-menu-list;
 }
-.header_title{
+.header_title {
   grid-area: header_title;
 }
-.header_description{
+.header_description {
   grid-area: header_description;
 }
-.first_section{
+.first_section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: 
-  "first_section-title multitasking multitasking"
-  "first_section-title multitasking_description multitasking_description"
-  "first_section-title dopamine dopamine"
-  "first_section-title dopamine_descritpion dopamine_descritpion"
-  ;
+  grid-template-areas:
+    "first_section-title multitasking multitasking"
+    "first_section-title multitasking_description multitasking_description"
+    "first_section-title dopamine dopamine"
+    "first_section-title dopamine_descritpion dopamine_descritpion";
 }
-.multitasking{
+.multitasking {
   grid-area: multitasking;
 }
-.multitasking_description{
+.multitasking_description {
   grid-area: multitasking_description;
 }
-.dopamine{
-grid-area: dopamine;
+.dopamine {
+  grid-area: dopamine;
 }
-.dopamine_descritpion{
+.dopamine_descritpion {
   grid-area: dopamine_descritpion;
 }
-
