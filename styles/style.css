@@ -4,9 +4,7 @@
   margin: auto;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
-body{
-  background-color: var(--color-background);
-}
+
 .header__theme-menu-list {
   display: flex;
   list-style: none; /* Отключение маркеров списка */
@@ -102,8 +100,7 @@ img {
     grid-template-areas: 
     "sunset sunset ice-cream"
     "tape books ice-cream"
-    "tape street street"
-    ;
+    "tape street street";
 }
 .sunset{
   object-fit: cover;
