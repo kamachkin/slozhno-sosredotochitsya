@@ -3,9 +3,10 @@
   и их переопределение под различные устройства
 */
 :root {
-  --color-text-primary: #F1B2CE; /* Основной текст */
+  --color-text-primary: #f1b2ce; /* Основной текст */
   --color-text-secondary: #000028; /* Второстепенный текст */
   --color-background: #000028; /* Основной фон */
-  --color-accent: #FF0070; /* Акцентный цвет */
-  --color-highlight: #DB00FF; /*Дополнительный цвет */
+  --color-accent: #ff0070; /* Акцентный цвет */
+  --color-highlight: #db00ff; /*Дополнительный цвет */
+  --background-image: url("../images/cover-image-dark.png");
 }
