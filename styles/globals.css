@@ -1,4 +1,4 @@
-/* Глобальные стили для проекта, их можно дополнять и менять по желанию */
+
 
 *,
 *::before,
@@ -40,3 +40,10 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+a:focus {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+

@@ -16,4 +16,7 @@
   color: var(--color-text-primary);
   background-color: var(--color-background);
   --background-image: url("../images/cover-image-light.png");
+.header_rec{
+  display: none;
+}
 }
