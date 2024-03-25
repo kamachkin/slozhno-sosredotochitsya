@@ -5,51 +5,54 @@
   background-color: var(--color-background);
   color: var(--color-text-primary);
   background-image: var(--background-image);
-  background-size: auto 100vh;
+  background-size: 100vmax 100vh;
   background-position: center top;
   background-repeat: no-repeat;
-  max-width: 1440px;
 }
-p,
-h1,
-h2,
-h3,
-h4 {
-  font-size: 18px;
-}
-a {
+
+.main__link {
   color: var(--color-text-primary);
   text-shadow: 2px 2px 0 var(--color-accent);
   text-decoration: none;
 }
-a:hover {
+
+.main__link:hover {
   border-bottom: 1px solid var(--color-text-primary);
 }
-a:focus {
+
+.main__link:focus {
   border: 1px solid var(--color-text-primary);
 }
+
 .title {
   color: var(--color-accent);
 }
+
 .subtitle {
   color: var(--color-background);
   background-color: var(--color-accent);
 }
+
 .subtitle-ndf {
   grid-column: 2/4;
 }
+
 .paragraph {
   margin-bottom: 20px;
   color: var(--color-text-primary);
+  line-height: 23.4px;
 }
+
 .paragraph:last-child {
   margin-bottom: 0;
 }
-h2 {
+
+.title {
   color: var(--color-accent);
   margin: 0;
 }
-button {
+
+.header__theme-menu-button {
   background: none;
   border: none;
   margin: 0;
@@ -58,25 +61,36 @@ button {
   text-transform: lowercase;
   color: var(--color-accent);
   font-size: 18px;
-  line-height: 27px;
+  line-height: 18px;
   outline: none;
   padding: 0 13px 3px 13px;
   font-family: "IBM Plex mono", monospace;
+
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--color-accent);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--color-accent);
 }
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--color-accent);
   pointer-events: none;
 }
+
 .background {
   background-color: var(--color-accent);
   color: var(--color-background);
   margin: 0;
 }
+
 .header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 2fr 2fr 1fr 1fr;
   align-items: start;
   min-height: 768px;
   padding: 21.5px;
@@ -84,17 +98,23 @@ button {
   min-height: 668px;
   position: relative;
 }
+
 .header__theme-menu {
   grid-column: 1/3;
   grid-row: 1;
+  align-self: start;
   justify-self: center;
+
 }
+
 .header__theme-menu-list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   list-style: none;
   padding: 0;
 }
+
 .header_title {
   grid-column: 1/3;
   grid-row: 2;
@@ -106,18 +126,24 @@ button {
   line-height: 82.5%;
   align-self: center;
 }
+
 .header_description {
   grid-column: 2;
   grid-row: 3;
   display: inline-block;
   font-weight: bold;
-  align-self: center;
+  align-self: end;
 }
 
 .main {
   margin-top: 60px;
 }
-.header::before {
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
   content: "";
   position: absolute;
   top: 0;
@@ -129,7 +155,8 @@ button {
   z-index: 1;
   margin: 21.5px 21.5px 0 21.5px;
 }
-.header::after {
+
+.decorated-zone::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -141,6 +168,7 @@ button {
   z-index: 1;
   margin: 0 21.5px 21.5px;
 }
+
 .header_rec {
   content: "";
   position: absolute;
@@ -159,6 +187,7 @@ button {
   top: 0;
   right: 0;
 }
+
 .header_rec::before {
   content: "REC";
   position: absolute;
@@ -174,28 +203,38 @@ button {
   row-gap: 80px;
   margin: 60px 20px 0 20px;
 }
+
 .section-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
 .title {
   grid-column: 1;
 }
+
 .container {
   display: grid;
   grid-column: 2/4;
   row-gap: 10px;
 }
+
+.container-ndf {
+  row-gap: 20px;
+}
+
 .column {
   grid-column: 1;
 }
-img {
+
+.image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
+
 .images {
   display: grid;
   gap: 20px;
@@ -205,23 +244,30 @@ img {
     "tape books ice-cream"
     "tape street street";
   margin-bottom: 60px;
+  grid-template-columns: repeat(3, 1fr);
 }
+
 .images_title {
   grid-area: images_title;
   margin: 0;
 }
+
 .sunset {
   grid-area: sunset;
 }
+
 .ice-cream {
   grid-area: ice-cream;
 }
+
 .tape {
   grid-area: tape;
 }
+
 .books {
   grid-area: books;
 }
+
 .street {
   grid-area: street;
 }
@@ -236,63 +282,81 @@ img {
   min-height: 668px;
 }
 
+.footer_title {
+  text-shadow: 2px 2px 0 var(--color-accent);
+}
+
 @media (max-width: 1023px) {
   .header__theme-menu {
     align-self: center;
     justify-self: end;
-    width: auto;
-  }
-  .header__theme-menu-list {
-    flex-direction: column;
+    min-width: auto;
   }
 
-  .column-ndf{
+  .header__theme-menu-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+.header_title{
+  justify-self: start;
+}
+  .column-ndf {
     grid-column: 1/4;
   }
 }
+
 @media (max-width: 767px) {
   .section-grid {
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     row-gap: 20px;
     column-gap: 0;
   }
+
   .title,
   .container,
   .column {
     grid-column: 1;
   }
+
   .column {
     grid-column: 1;
   }
 
   .subtitle-ndf {
     grid-column: 1;
-  }
-  .main {
-    row-gap: 30px;
 
   }
+
+  .main {
+    row-gap: 30px;
+  }
+
   .header {
     grid-template-rows: repeat(3, 1fr);
     align-items: center;
   }
+
   .header::after {
     margin: 0 10px 20px;
   }
+
   .header::before {
     margin: 10px 10px 0 10px;
   }
+
   .header_title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
+
   .header_description {
     grid-column: 1/3;
   }
+
   .page {
     margin: 0;
   }
 
   .images {
+    grid-template-columns: 1fr;
     grid-template-areas:
       "images_title"
       "sunset"
@@ -302,6 +366,7 @@ img {
       "street";
     gap: 10px;
   }
+
   .footer {
     min-height: 668px;
   }

@@ -4,11 +4,16 @@
   переключая тему
 */
 .page.theme_light {
-  --color-text-primary: #353430; /* Основной текст */
-  --color-text-secondary: #353430; /* Второстепенный текст */
-  --color-background: #fff1f7; /* Основной фон */
-  --color-accent: #ff0070; /* Акцентный цвет */
-  --color-highlight: #ff8dcb; /*Дополнительный цвет */
+  --color-text-primary: #353430;
+  /* Основной текст */
+  --color-text-secondary: #353430;
+  /* Второстепенный текст */
+  --color-background: #fff1f7;
+  /* Основной фон */
+  --color-accent: #ff0070;
+  /* Акцентный цвет */
+  --color-highlight: #ff8dcb;
+  /*Дополнительный цвет */
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
@@ -16,7 +21,32 @@
   color: var(--color-text-primary);
   background-color: var(--color-background);
   --background-image: url("../images/cover-image-light.png");
-.header_rec{
-  display: none;
+
+  .header_rec {
+    display: none;
+  }
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-text-primary: #353430;
+    /* Основной текст */
+    --color-text-secondary: #353430;
+    /* Второстепенный текст */
+    --color-background: #fff1f7;
+    /* Основной фон */
+    --color-accent: #ff0070;
+    /* Акцентный цвет */
+    --color-highlight: #ff8dcb;
+    /*Дополнительный цвет */
+    /* сохраните этот селектор в приведённом виде.
+      Так стили написанные ниже будут иметь больший вес,
+      чем стили в медиазапросе предпочтений пользователя
+    */
+    --background-image: url("../images/cover-image-light.png");
+  }
+
+  .header_rec {
+    display: none;
+  }
 }
