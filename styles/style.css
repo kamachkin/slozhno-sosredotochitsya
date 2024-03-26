@@ -33,6 +33,10 @@
   background-color: var(--color-accent);
 }
 
+.sub-subtitle {
+  font-weight: normal;
+}
+
 .subtitle-ndf {
   grid-column: 2/4;
 }
@@ -122,9 +126,11 @@
   color: var(--color-highlight);
   text-shadow: 4px 4px 0 var(--color-accent);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  justify-self: center;
+  justify-self: start;
   line-height: 82.5%;
   align-self: center;
+  position: relative;
+  left: -21.5px
 }
 
 .header_description {
@@ -135,9 +141,7 @@
   align-self: end;
 }
 
-.main {
-  margin-top: 60px;
-}
+
 
 .decorated-zone {
   position: relative;
@@ -169,39 +173,11 @@
   margin: 0 21.5px 21.5px;
 }
 
-.header_rec {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 9px;
-  height: 9px;
-  border-top: 1px solid var(--color-accent);
-  border-right: 1px solid var(--color-accent);
-  background-color: var(--color-accent);
-  border-radius: 25px;
-  z-index: 1;
-  margin: 30px 30px 0 21.5px;
-  box-shadow: 0px 0px 4px 2px var(--color-accent);
-  background: var(--color-accent);
-  top: 0;
-  right: 0;
-}
-
-.header_rec::before {
-  content: "REC";
-  position: absolute;
-  color: var(--color-accent);
-  left: -45px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0 5px;
-}
 
 .main {
   display: grid;
   row-gap: 80px;
-  margin: 60px 20px 0 20px;
+  margin: 62px 20px 0 20px;
 }
 
 .section-grid {
@@ -244,7 +220,7 @@
     "tape books ice-cream"
     "tape street street";
   margin-bottom: 60px;
-  grid-template-columns: repeat(3, 1fr);
+
 }
 
 .images_title {
@@ -284,24 +260,39 @@
 
 .footer_title {
   text-shadow: 2px 2px 0 var(--color-accent);
+  left: 0px;
 }
 
 @media (max-width: 1023px) {
+  .header {
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
+  }
+
   .header__theme-menu {
-    align-self: center;
+    grid-row: 2/3;
+    align-self: start;
     justify-self: end;
     min-width: auto;
   }
 
+  .header_title {
+    grid-row: 3/4;
+  }
+
+  .header_description {
+    grid-row: 4/5;
+  }
+
   .header__theme-menu-list {
     grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
   }
-.header_title{
-  justify-self: start;
-}
+
   .column-ndf {
     grid-column: 1/4;
   }
+
+  .images {}
 }
 
 @media (max-width: 767px) {
@@ -331,8 +322,10 @@
   }
 
   .header {
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
     align-items: center;
+    padding: 10px;
   }
 
   .header::after {
@@ -343,12 +336,34 @@
     margin: 10px 10px 0 10px;
   }
 
+  .header__theme-menu {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .header__theme-menu-list {
+    gap: 20px;
+  }
+
   .header_title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    grid-column: 1;
+    grid-row: 2;
+    left: 0;
   }
 
   .header_description {
-    grid-column: 1/3;
+    grid-column: 1;
+    grid-row: 3;
+    align-self: center;
+  }
+
+  .decorated-zone::after {
+    margin: 0 10px 10px;
+  }
+  .decorated-zone::before {
+    margin: 10px 10px 10px;
   }
 
   .page {
@@ -365,9 +380,17 @@
       "books"
       "street";
     gap: 10px;
+    margin-bottom: 5px;
   }
 
   .footer {
     min-height: 668px;
   }
+.main{
+  margin: 40px 10px 40px 10px;
+  gap: 50px;
+}
+br{
+  display: none;
+}
 }
