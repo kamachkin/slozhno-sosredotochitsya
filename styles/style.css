@@ -8,6 +8,7 @@
   background-size: 100vmax 100vh;
   background-position: center top;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .main__link {
@@ -97,7 +98,6 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 2fr 2fr 1fr 1fr;
   align-items: start;
-  min-height: 768px;
   padding: 21.5px;
   height: 100vh;
   min-height: 668px;
@@ -281,7 +281,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 768px;
   text-shadow: 2px 2px 0 var(--color-accent);
   height: 100vh;
   min-height: 668px;
@@ -412,9 +411,6 @@
     margin-bottom: 5px;
   }
 
-  .footer {
-    min-height: 668px;
-  }
 
   .main {
     margin: 40px 10px 40px 10px;
