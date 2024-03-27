@@ -22,33 +22,8 @@
   --background-image: url("../images/cover-image-dark.png");
   .header_rec {
     display: block;
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 9px;
-    height: 9px;
-    border-top: 1px solid var(--color-accent);
-    border-right: 1px solid var(--color-accent);
-    background-color: var(--color-accent);
-    border-radius: 25px;
-    z-index: 1;
-    margin: 30px 30px 0 21.5px;
-    box-shadow: 0px 0px 4px 2px var(--color-accent);
-    background: var(--color-accent);
-    top: 0;
-    right: 0;
   }
   
-  .header_rec::before {
-    content: "REC";
-    position: absolute;
-    color: var(--color-accent);
-    left: -45px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0 5px;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,6 +40,5 @@
     /*Дополнительный цвет */
     --background-image: url("../images/cover-image-dark.png");
   }
-  
   
 }

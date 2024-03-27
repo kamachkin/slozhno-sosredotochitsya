@@ -22,10 +22,13 @@
   background-color: var(--color-background);
   --background-image: url("../images/cover-image-light.png");
 
+  .header_rec {
+    display: none;
+  }
 
 }
 
-@media (prefers-color-scheme: light){
+@media (prefers-color-scheme: light) {
   :root {
     --color-text-primary: #353430;
     /* Основной текст */
@@ -43,6 +46,7 @@
     */
     --background-image: url("../images/cover-image-light.png");
   }
+
   .header_rec {
     display: none;
   }
