@@ -3,15 +3,12 @@
   и их переопределение под различные устройства
 */
 :root {
-  --color-text-primary: #f1b2ce;
-  /* Основной текст */
-  --color-text-secondary: #000028;
-  /* Второстепенный текст */
+  --color-button: #353430;
+  --color-title: #FFC2E6;
+  --color-shadow: #FF8DCB;
+  --color-subtitle: #353430;
+  --color-text: #353430;
   --color-background: #000028;
-  /* Основной фон */
-  --color-accent: #ff0070;
-  /* Акцентный цвет */
-  --color-highlight: #db00ff;
-  /*Дополнительный цвет */
+  --color-hover: rgba(255, 0, 112, 0.4);
   --background-image: url("../images/cover-image-dark.png");
 }
