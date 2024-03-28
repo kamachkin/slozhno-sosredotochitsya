@@ -16,7 +16,6 @@
   --color-text: #F1B2CE;
   --color-background: #000028;
   --color-hover: rgba(255, 0, 112, 0.4);
-
   --background-image: url("../images/cover-image-dark.png");
   .header_rec {
     display: block;
@@ -26,12 +25,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-button: #353430;
-    --color-title: #FFC2E6;
-    --color-shadow: #FF8DCB;
-    --color-subtitle: #353430;
-    --color-text: #353430;
+    --color-button: #FF0070;
+    --color-title: #DB00FF;
+    --color-shadow: #FF0070;
+    --color-subtitle: #000233;
+    --color-text: #F1B2CE;
     --color-background: #000028;
+    --color-hover: rgba(255, 0, 112, 0.4);
     --background-image: url("../images/cover-image-dark.png");
   }
   

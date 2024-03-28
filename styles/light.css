@@ -29,6 +29,7 @@
     --color-subtitle: #353430;
     --color-text: #353430;
     --color-background: #FFF1F7;
+    --color-hover: rgba(50, 49, 45, 0.4);
     --background-image: url("../images/cover-image-light.png");
   }
 
